@@ -67,12 +67,17 @@ agent = initialize_agent(
     memory=memory,
 )
 
-while True:
-    user_input = input("Enter your query or type 'exit' to quit: ")
+def handler(query):
+    response = agent.run(query)
+    return response
 
-    if user_input.lower() == "exit":
-        break
+# com terminal
+# while True:
+#     user_input = input("Enter your query or type 'exit' to quit: ")
 
-    response = agent.run(user_input)
+#     if user_input.lower() == "exit":
+#         break
 
-    print(response)
+#     response = agent.run(user_input)
+
+#     print(response)
