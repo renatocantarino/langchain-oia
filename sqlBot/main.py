@@ -34,4 +34,7 @@ agent = create_sql_agent(
     verbose=True,
     agent_type=AgentType.ZERO_SHOT_REACT_DESCRIPTION)
 
-agent.run("How many artists whose name starts with C?")
+
+def handler(query):
+   response = agent.run(query)
+   return response
